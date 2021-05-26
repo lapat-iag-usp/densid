@@ -107,16 +107,14 @@ int main(void)//PROGRAMA PRINCIPAL, O QUAL CHAMA TODAS AS FUN합ES///////////////
 	      printf("                        2---Sair\n\n\n\n"); 
 	      printf("Opcao ---> ");
 	      if(SETUPINPUT == true){
-	      	num = atoi(tuple[0].strVal);
+	      	num = atof(tuple[0].strVal);
 		  }
 		  else scanf("%d",&num); 
 	      switch(num) 
 	      { 
 	         case 1:
-	         	//test2();
 	           calculos();
-	           //break; 
-	           exit(0);
+	           break; 
 	         case 2: exit(0); 
 	         default: puts("                 OPCAO INVALIDA!!!! TENTE NOVAMENTE");fflush(stdin);getchar();
 	      }                 
@@ -169,7 +167,7 @@ calculos()//FUN플O QUE REALIZA OS TRABALHOS RELACIONADOS COM A PARTE DE CALCULOS
             {
                printf("\nNova area:  ");
                if(SETUPINPUT == true){
-	      		area = atoi(tuple[2].strVal);
+	      		area = atof(tuple[2].strVal);
 		    	}
 		    	else scanf("%f",&area);
                fclose(farea);
@@ -282,7 +280,7 @@ calculos()//FUN플O QUE REALIZA OS TRABALHOS RELACIONADOS COM A PARTE DE CALCULOS
          {
            fflush(stdin);
            if(SETUPINPUT == true){
-	      	bn_int = atoi(tuple[8].strVal);
+	      	bn_int = atof(tuple[8].strVal);
 		  }
 		  else scanf("%d",&bn_int);
            if (bn_int > 3) printf("\nO numero de intervalos nao pode exceder o valor 3!!Digite novamente: "); // Talvez fazer um switch case aqui
@@ -291,7 +289,7 @@ calculos()//FUN플O QUE REALIZA OS TRABALHOS RELACIONADOS COM A PARTE DE CALCULOS
          n1:      
          fflush(stdin);
          if(SETUPINPUT == true){
-	      	vmin1 = atoi(tuple[9].strVal);
+	      	vmin1 = atof(tuple[9].strVal);
 		 }
 		 else scanf("%d",&vmin1);
          if ((vmin1 == 0 ) && (vmin1 != 1 ) && (vmin1 != 2 ) && (vmin1 != 3 ) && (vmin1 != 4) && (vmin1 != 5 ) && (vmin1 != 6 ) && (vmin1 != 7 ) && (vmin1 != 8 ) && (vmin1 != 9 ))
@@ -305,7 +303,7 @@ calculos()//FUN플O QUE REALIZA OS TRABALHOS RELACIONADOS COM A PARTE DE CALCULOS
             n2:
             fflush(stdin);
             if(SETUPINPUT == true){
-	      		vmax1 = atoi(tuple[10].strVal);
+	      		vmax1 = atof(tuple[10].strVal);
 		  	}
 		  	else scanf("%d",&vmax1);
             if ((vmax1 == 0 ) && (vmax1 != 1 ) && (vmax1 != 2 ) && (vmax1 != 3 ) && (vmax1 != 4) && (vmax1 != 5 ) && (vmax1 != 6 ) && (vmax1 != 7 ) && (vmax1 != 8 ) && (vmax1 != 9 ))
@@ -323,7 +321,7 @@ calculos()//FUN플O QUE REALIZA OS TRABALHOS RELACIONADOS COM A PARTE DE CALCULOS
                n3:
                fflush(stdin);
                if(SETUPINPUT == true){
-	      			vmin2 = atoi(tuple[11].strVal);
+	      			vmin2 = atof(tuple[11].strVal);
 		 		}
 		 		else scanf("%d",&vmin2);
                if ((vmin2 == 0 ) && (vmin2 != 1 ) && (vmin2 != 2 ) && (vmin2 != 3 ) && (vmin2 != 4) && (vmin2 != 5 ) && (vmin2 != 6 ) && (vmin2 != 7 ) && (vmin2 != 8 ) && (vmin2 != 9 ))
@@ -339,7 +337,7 @@ calculos()//FUN플O QUE REALIZA OS TRABALHOS RELACIONADOS COM A PARTE DE CALCULOS
                n4:
                fflush(stdin);
                if(SETUPINPUT == true){
-	      			vmax2 = atoi(tuple[12].strVal);
+	      			vmax2 = atof(tuple[12].strVal);
 		 		}
 		 		else scanf("%d",&vmax2);
                if ((vmax2 == 0 ) && (vmax2 != 1 ) && (vmax2 != 2 ) && (vmax2 != 3 ) && (vmax2 != 4) && (vmax2 != 5 ) && (vmax2 != 6 ) && (vmax2 != 7 ) && (vmax2 != 8 ) && (vmax2 != 9 ))
@@ -600,7 +598,7 @@ calculos()//FUN플O QUE REALIZA OS TRABALHOS RELACIONADOS COM A PARTE DE CALCULOS
         printf("\n 1 - Digitar um unico valor     2 - Ler os dados a partir de um arquivo:  ");
         fflush(stdin);  
         if(SETUPINPUT == true){
-	      	VolAns = atoi(tuple[13].strVal);
+	      	VolAns = atof(tuple[13].strVal);
 		}
 		else scanf("%d",&VolAns);
         while ((VolAns != 1) && (VolAns != 2))
@@ -611,7 +609,7 @@ calculos()//FUN플O QUE REALIZA OS TRABALHOS RELACIONADOS COM A PARTE DE CALCULOS
          }
          printf("\nDigite o erro percentual (%) do volume (0 para nenhum):");
          if(SETUPINPUT == true){
-	      	errovol = atoi(tuple[14].strVal);
+	      	errovol = atof(tuple[14].strVal);
 		}
 		else scanf("%f",&errovol);
          errovol=errovol/100;
@@ -620,7 +618,7 @@ calculos()//FUN플O QUE REALIZA OS TRABALHOS RELACIONADOS COM A PARTE DE CALCULOS
            printf("\nDigite o valor para o volume: ");
            fflush(stdin);
            if(SETUPINPUT == true){
-	      	vol = atoi(tuple[15].strVal);
+	      	vol = atof(tuple[15].strVal);
 			}
 			else scanf("%f",&vol);
            for(x=0; x < 500; x++) guarda_volume[x] = vol;
@@ -649,20 +647,24 @@ calculos()//FUN플O QUE REALIZA OS TRABALHOS RELACIONADOS COM A PARTE DE CALCULOS
          	memcpy(ftrk, tuple[17].strVal, 10);
 			ftrk[10] = '\0';
 		 }
+		 else scanf("%s",&ftrk);
          strcat(ftrk,".txt");
+         printf("\n%s", ftrk);
          printf("\nDigite o nome do arquivo dos FATORES DE RESPOSTA de linha L: "); 
          if(SETUPINPUT == true){
          	memcpy(ftrl, tuple[18].strVal, 10);
 			ftrl[10] = '\0';
 		 }
+		 else scanf("%s",&ftrl);
          strcat(ftrl,".txt");
+         printf("\n%s", ftrl);
          n_int = 4;
          printf("\nEm quantos intervalos voce ira dividir a analise? ");
          while (n_int > 3)
          {
            fflush(stdin);
            if(SETUPINPUT == true){
-	      	n_int = atoi(tuple[19].strVal);
+	      	n_int = atof(tuple[19].strVal);
 		  }
 		  else scanf("%d",&n_int);
            if (n_int > 3) printf("\nO numero de intervalos nao pode exceder o valor 3!!Digite novamente: ");
@@ -671,7 +673,7 @@ calculos()//FUN플O QUE REALIZA OS TRABALHOS RELACIONADOS COM A PARTE DE CALCULOS
          n7:
          fflush(stdin);
          if(SETUPINPUT == true){
-	      	vmin1 = atoi(tuple[20].strVal);
+	      	vmin1 = atof(tuple[20].strVal);
 		  }
 		  else scanf("%d",&vmin1);
          if ((vmin1 == 0 ) && (vmin1 != 1 ) && (vmin1 != 2 ) && (vmin1 != 3 ) && (vmin1 != 4) && (vmin1 != 5 ) && (vmin1 != 6 ) && (vmin1 != 7 ) && (vmin1 != 8 ) && (vmin1 != 9 ))
@@ -685,7 +687,7 @@ calculos()//FUN플O QUE REALIZA OS TRABALHOS RELACIONADOS COM A PARTE DE CALCULOS
             n8:
             fflush(stdin);
             if(SETUPINPUT == true){
-	      	vmax1 = atoi(tuple[21].strVal);
+	      	vmax1 = atof(tuple[21].strVal);
 		  }
 		  else scanf("%d",&vmax1);
             if ((vmax1 == 0 ) && (vmax1 != 1 ) && (vmax1 != 2 ) && (vmax1 != 3 ) && (vmax1 != 4) && (vmax1 != 5 ) && (vmax1 != 6 ) && (vmax1 != 7 ) && (vmax1 != 8 ) && (vmax1 != 9 ))
@@ -703,7 +705,7 @@ calculos()//FUN플O QUE REALIZA OS TRABALHOS RELACIONADOS COM A PARTE DE CALCULOS
                n9:
                fflush(stdin);
                if(SETUPINPUT == true){
-	      	vmin2 = atoi(tuple[22].strVal);
+	      	vmin2 = atof(tuple[22].strVal);
 		  }
 		  else scanf("%d",&vmin2);
                
@@ -720,7 +722,7 @@ calculos()//FUN플O QUE REALIZA OS TRABALHOS RELACIONADOS COM A PARTE DE CALCULOS
                n10:
                fflush(stdin);
                if(SETUPINPUT == true){
-	      	vmax2 = atoi(tuple[23].strVal);
+	      	vmax2 = atof(tuple[23].strVal);
 		  }
 		  else scanf("%d",&vmax2);
                if ((vmax2 == 0 ) && (vmax2 != 1 ) && (vmax2 != 2 ) && (vmax2 != 3 ) && (vmax2 != 4) && (vmax2 != 5 ) && (vmax2 != 6 ) && (vmax2 != 7 ) && (vmax2 != 8 ) && (vmax2 != 9 ))
@@ -764,7 +766,7 @@ calculos()//FUN플O QUE REALIZA OS TRABALHOS RELACIONADOS COM A PARTE DE CALCULOS
          if (vmin1 < 11) vmin1 = 11;
          if(SETUPINPUT == true){
          	memccpy(volume, tuple[24].strVal, ':', 20);
-			volume[strlen(volume)] = '\0';
+			volume[strlen(volume)-1] = '\0';
 			printf("\n vol: %s", volume);
 		 }
 		 else scanf("%s",&volume);
