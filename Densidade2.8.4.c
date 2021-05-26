@@ -59,7 +59,7 @@ int main(void)//PROGRAMA PRINCIPAL, O QUAL CHAMA TODAS AS FUNÇÕES///////////////
 } 
 ////////////////////////////////////////////////////////////////////////////////////                
 ////////////////////////////////////////////////////////////////////////////////////                
-calculos()//FUNÇÃO QUE REALIZA OS TRABALHOS RELACIONADOS COM A PARTE DE CALCULOS 
+void calculos()//FUNÇÃO QUE REALIZA OS TRABALHOS RELACIONADOS COM A PARTE DE CALCULOS 
 { 
          FILE *arq, *arq2, *arq3, *arq4, *farea, *fbromo, *fzinco, *fteste, *arq5, *arq6,*fpteste /*para debug 26-07-2013*/,*fpteste2/*Para debug 30-07-2013*/;
          char nome_arq[100], nome_arq_2[100], caracter[500][500], caracter2[500][500], caracter3[500][500] ,ajuda[2], nome[10], volume[80], volumeb[80], ajuda2[80], imprime[90], rp[2], tst[2], nomeint[80], branco_aux[80];
